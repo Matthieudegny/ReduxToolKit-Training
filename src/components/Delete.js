@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { deletePicture } from "../feature/pictures.slice";
 
 const Delete = ({ id }) => {
+  /*test*/
   const dispatch = useDispatch();
 
   const handleDelete = () => {

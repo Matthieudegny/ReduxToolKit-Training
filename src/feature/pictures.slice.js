@@ -25,10 +25,14 @@ export const picturesSlice = createSlice({
   },
   reducers: {
     /* je crée ici les fonctions appelées dans mes composants qui renferment l'action + le state*/
+    //ne pas oublier {payload} = action.payload
     setPicturesData: (state, { payload }) => {
       state.pictures = payload;
     },
     addPicture: (state, { payload }) => {
+      //avec le redux classqieu on aurait du renvoyer un nouveau state (le state reste pure) avec son payload ->
+      //state.pictures = [...state.pcitures, payload]
+      //mais reduxtoolkkit propose de directement envoyer le payload dans le state (car le state est un tableau)
       state.pictures.push(payload);
     },
     editPicture: (state, { payload }) => {

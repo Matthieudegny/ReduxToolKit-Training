@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import picturesReducer from "../feature/pictures.slice";
 
 export default configureStore({
+  //on insère les slices ici
   reducer: {
     pictures: picturesReducer,
   },

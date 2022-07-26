@@ -18,7 +18,7 @@ const enhancers = composeEnhancers(
 const store = createStore(reducer,enhancers);
 export default store;
 
-Toolkit = fichier store.js dans dossier app
+Toolkit = fichier store.js dans dossier app et fichier exemple.slice.js dans dossier feature 
 Ici ce sont les slices qui sont appelés qui representent "les reducers + actions" (à voir pour les middlewares avec createAsyncThunk)
-
+! configure store et non createStore
 */

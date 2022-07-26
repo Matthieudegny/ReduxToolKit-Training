@@ -1,4 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
+/*j'importe createSlice de reduxToolKit pour la création du slice et je l'utilise pour créer mon compartiment 
+de state enregistré dans ma variable picturesSlice
+
+contrairement à redux ou je déclare le state initiale + création du reducer ->
+
+export const initialState = {
+    logged: false,
+  };
+  
+  const reducer = (state = initialState, action = {}) => {
+    switch (action.type) {
+      default:
+        return state;
+    }
+  };
+  
+  export default reducer;
+*/
 
 export const picturesSlice = createSlice({
   name: "pictures",
@@ -6,6 +24,7 @@ export const picturesSlice = createSlice({
     pictures: null,
   },
   reducers: {
+    /* je crée ici les fonctions appelées dans mes composants qui renferment l'action + le state*/
     setPicturesData: (state, { payload }) => {
       state.pictures = payload;
     },
@@ -30,6 +49,8 @@ export const picturesSlice = createSlice({
   },
 });
 
+/*subitlité ici contraierement à redux, je dois exporter chaque fonction de mon slice pour pouvoir les
+utiliser dans mes composants + exporter le slice qui est utilisé dans le store*/
 export const { setPicturesData, addPicture, editPicture, deletePicture } =
   picturesSlice.actions;
 export default picturesSlice.reducer;

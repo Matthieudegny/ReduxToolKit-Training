@@ -13,3 +13,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+/*
+identique à Redux avec l'encadrement de App avec Provider + store 
+*/

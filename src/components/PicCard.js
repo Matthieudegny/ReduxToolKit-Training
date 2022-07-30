@@ -20,6 +20,7 @@ const PicCard = ({ pic }) => {
     };
 
     axios.put("http://localhost:5000/pictures/" + pic.id, data).then(() => {
+      //le payload comprend un tableau pour pouvoir envoyer pls éléments, le payload n'accepte pas (data.artist , pic.id)
       dispatch(editPicture([data.artist, pic.id]));
     });
   };

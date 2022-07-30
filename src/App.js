@@ -12,7 +12,7 @@ const App = () => {
   const getPictures = () => {
     axios
       .get("http://localhost:5000/pictures")
-      //setPicturesData est la fonction importé directement de picture, dans ce cas pas besoin de passer par action (contrairement à redux)
+      //setPicturesData est la fonction importé directement de pictures(slice), dans ce cas pas besoin de passer par action (contrairement à redux)
       .then((res) => dispatch(setPicturesData(res.data)));
   };
 

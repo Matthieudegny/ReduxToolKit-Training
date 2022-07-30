@@ -30,9 +30,20 @@ export const picturesSlice = createSlice({
       state.pictures = payload;
     },
     addPicture: (state, { payload }) => {
-      //avec le redux classqieu on aurait du renvoyer un nouveau state (le state reste pure) avec son payload ->
-      //state.pictures = [...state.pcitures, payload]
-      //mais reduxtoolkkit propose de directement envoyer le payload dans le state (car le state est un tableau)
+      /*avec le redux classqieu on aurait du renvoyer un nouveau state (le state reste pure) avec son payload exemple->
+      case SET_RECIPES_FRIDGE:
+        return {
+          ...state,
+          recipesListFridge: action.payload,
+          loading:false,
+          message:'',
+        };
+
+      ce qui aurait donner avec toolkit
+      state.pictures = [...state.pcitures, payload]
+      mais reduxtoolkkit propose de directement envoyer le payload dans le state (car le state est un tableau avec toolkit)
+      */
+     //rappel state.pictures = ligne 22
       state.pictures.push(payload);
     },
     editPicture: (state, { payload }) => {
